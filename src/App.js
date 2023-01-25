@@ -7,6 +7,10 @@ import New from './Pages/New';
 import Show from './Pages/Show';
 import Edit from './Pages/Edit';
 import Error from './Pages/Error';
+import EditPlaylist from './Pages/PlaylistEdit';
+import NewPlaylist from './Pages/NewPlaylist';
+import PlaylistIndex from './Pages/PlaylistIndex';
+import ShowPlaylists from './Pages/PlaylistShow';
 
 // NavBar
 import Nav from './Components/Nav';
@@ -23,6 +27,13 @@ function App() {
             <Route path="/songs/new" element={<New />}></Route>
             <Route path="/songs/:id" element={<Show />}></Route>
             <Route path="/songs/:id/edit" element={<Edit />}></Route>
+            <Route path="/playlists " element={<PlaylistIndex />}></Route>
+            <Route path="/playlists/new " element={<NewPlaylist />}></Route>
+            <Route path="/playlists/:id " element={<ShowPlaylists />}></Route>
+            <Route
+              path="/playlists/:id/edit "
+              element={<EditPlaylist />}
+            ></Route>
             <Route path="*" element={<Error />}></Route>
           </Routes>
         </main>

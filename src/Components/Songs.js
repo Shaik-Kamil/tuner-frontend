@@ -20,7 +20,7 @@ function Songs() {
             <tr>
               <th></th>
               <th>Take me there</th>
-              <th>See this bookmark</th>
+              <th>See this Songs</th>
             </tr>
           </thead>
           <tbody>

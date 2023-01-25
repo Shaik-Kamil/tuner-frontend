@@ -9,6 +9,9 @@ export default function Nav() {
       <button>
         <Link to="/songs/new">New Songs</Link>
       </button>
+      <button>
+        <Link to="/playlists">Playlists</Link>
+      </button>
     </nav>
   );
 }
