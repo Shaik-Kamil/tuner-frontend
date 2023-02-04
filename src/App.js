@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
 
 // Pages
 import Home from './Pages/Home';
@@ -14,13 +16,14 @@ import ShowPlaylists from './Pages/PlaylistShow';
 
 // NavBar
 import Nav from './Components/Nav';
+import * as tailwind from './Css/style';
 
 function App() {
   return (
-    <div className="App">
+    <div className={tailwind.app}>
       <Router>
         <Nav />
-        <main>
+        <main className={tailwind.main}>
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/songs" element={<Index />}></Route>
@@ -35,6 +38,7 @@ function App() {
               element={<EditPlaylist />}
             ></Route>
             <Route path="*" element={<Error />}></Route>
+           
           </Routes>
         </main>
       </Router>

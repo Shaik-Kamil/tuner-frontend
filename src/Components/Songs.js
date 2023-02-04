@@ -14,13 +14,19 @@ function Songs() {
   }, []);
   return (
     <div className="Songs">
-      <section>
-        <table>
-          <thead>
+      <section className="">
+        <table className="bg-orange-500 w-full text-sm text-left ">
+          <thead className="bg-orange-700 uppercase">
             <tr>
-              <th></th>
-              <th>Take me there</th>
-              <th>See this Songs</th>
+              <th scope="col" className="px-6 py-3">
+                Favorite
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Take me there
+              </th>
+              <th scope="col" className="px-6 py-3">
+                See the Songs
+              </th>
             </tr>
           </thead>
           <tbody>

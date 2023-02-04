@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 function Song({ song }) {
   return (
-    <tr>
-      <td>
+    <tr class="even:bg-yellow-500">
+      <td className="px-6 py-4 ">
         {song.is_favorite ? (
           <span>⭐️</span>
         ) : (
