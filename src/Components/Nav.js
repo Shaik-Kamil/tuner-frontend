@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
 
-export default function Nav() {
+export default function Nav({ theme, setTheme }) {
   return (
     <nav className="bg-orange-700 flex justify-between">
+      <div className="toggleDarkBtn">
+        <button onClick={() => setTheme(!theme)}>
+          🌗<span class="slideBtnTg round"></span>
+        </button>
+      </div>
+
       <h1 className="font-signature text-7xl h-50 p-4">
         <Link to="/songs">Songs</Link>
       </h1>

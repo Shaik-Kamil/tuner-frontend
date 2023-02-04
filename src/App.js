@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-
 // Pages
 import Home from './Pages/Home';
 import Index from './Pages/Index';
@@ -19,11 +18,15 @@ import Nav from './Components/Nav';
 import * as tailwind from './Css/style';
 
 function App() {
+  const [theme, setTheme] = useState(false);
+
   return (
-    <div className={tailwind.app}>
+    <div className={`h-[100vh] bg-orange-100 ${theme && 'dark'}`}>
       <Router>
-        <Nav />
-        <main className={tailwind.main}>
+        <Nav theme={theme} setTheme={setTheme} />
+        <main
+          className={`h-full dark:bg-slate-800 dark:text-blue-900 ${tailwind.main}`}
+        >
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/songs" element={<Index />}></Route>
@@ -38,7 +41,6 @@ function App() {
               element={<EditPlaylist />}
             ></Route>
             <Route path="*" element={<Error />}></Route>
-           
           </Routes>
         </main>
       </Router>
